@@ -1362,32 +1362,38 @@ CSS
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
+			-moz-flex-direction: column;    /* Dodaj to */
+    -webkit-flex-direction: column; /* Dodaj to */
+    -ms-flex-direction: column;      /* Dodaj to */
+    flex-direction: column;         /* Dodaj to */
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
 			border: solid 1px #ffffff;
 			border-radius: 4px;
 		}
+#header nav ul li {
+    padding-left: 0;
+    border-left: 0;               /* Zmień z solid 1px na 0 */
+    border-top: solid 1px #ffffff; /* Dodaj to */
+    width: 100%;                  /* Dodaj to, aby przyciski były równe */
+}
 
-			#header nav ul li {
-				padding-left: 0;
-				border-left: solid 1px #ffffff;
-			}
-
-				#header nav ul li:first-child {
-					border-left: 0;
-				}
+#header nav ul li:first-child {
+    border-top: 0;                /* Zmień z border-left na border-top */
+}
 
 				#header nav ul li a {
 					display: block;
-					min-width: 7.5rem;
-					height: 2.75rem;
-					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
-					text-transform: uppercase;
-					letter-spacing: 0.2rem;
-					font-size: 0.8rem;
-					border-bottom: 0;
+    min-width: 10rem;    /* Możesz zwiększyć tę wartość, aby menu było szersze */
+    height: 3rem;        /* Lekko zwiększona wysokość dla lepszego wyglądu */
+    line-height: 3rem;
+    padding: 0 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    border-bottom: 0;
+    text-align: center;  /* Dodaj to, aby napisy były na środku */
 				}
 
 					#header nav ul li a:hover {
@@ -1681,4 +1687,5 @@ CSS
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
 
