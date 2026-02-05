@@ -1302,14 +1302,33 @@ input, select, textarea {
 				font-size: 2rem;
 			}
 
-		#header .content {
-			border-style: solid;
-			border-color: #ffffff;
-			border-top-width: 1px;
-			border-bottom-width: 1px;
-			max-width: 100%;
-		/* Gradient: ciemny na środku, przezroczysty na bokach */
-    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.7) 15%, rgba(0,0,0,0.7) 85%, rgba(0,0,0,0));
+	Aby uzyskać ten efekt, musimy zmodyfikować sekcję /* Header */ w Twoim pliku. Najlepiej będzie dodać kolor tła bezpośrednio do klasy .content wewnątrz nagłówka.
+
+Oto co musisz zrobić:
+1. Znajdź w swoim pliku ten fragment (okolice linii 910):
+CSS
+
+#header .content {
+    border-style: solid;
+    border-color: #ffffff;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    max-width: 100%;
+}
+
+2. Zamień go na ten kod:
+
+Dodałem tutaj linię background-color, która stworzy ciemniejszy pasek pod tekstem:
+CSS
+
+#header .content {
+    border-style: solid;
+    border-color: #ffffff;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    max-width: 100%;
+    /* Dodana linia poniżej - czarny kolor, 50% przezroczystości */
+    background-color: rgba(0, 0, 0, 0.4); 
 
 		}
 
@@ -1662,3 +1681,4 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
