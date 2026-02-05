@@ -1357,44 +1357,46 @@ CSS
 				line-height: 2;
 			}
 
-		#header nav ul {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			-moz-flex-direction: column;    /* Dodaj to */
+	#header nav ul {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;    /* Dodaj to */
     -webkit-flex-direction: column; /* Dodaj to */
     -ms-flex-direction: column;      /* Dodaj to */
     flex-direction: column;         /* Dodaj to */
-			margin-bottom: 0;
-			list-style: none;
-			padding-left: 0;
-			border: solid 1px #ffffff;
-			border-radius: 4px;
+    align-items: center;            /* Wyśrodkowanie przycisków */
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    border: solid 1px #ffffff;
+    border-radius: 4px;
 		}
 #header nav ul li {
     padding-left: 0;
-    border-left: 0;               /* Zmień z solid 1px na 0 */
-    border-top: solid 1px #ffffff; /* Dodaj to */
-    width: 100%;                  /* Dodaj to, aby przyciski były równe */
+    border-left: 0;                /* Zmień z solid 1px na 0 */
+    border-top: solid 1px #ffffff;  /* Dodaj poziomą linię */
+    width: 100%;                   /* Przyciski zajmą całą szerokość menu */
 }
 
 #header nav ul li:first-child {
-    border-top: 0;                /* Zmień z border-left na border-top */
+    border-top: 0;                 /* Usuwamy linię nad pierwszym przyciskiem */
 }
 
 				#header nav ul li a {
-					display: block;
-    min-width: 10rem;    /* Możesz zwiększyć tę wartość, aby menu było szersze */
-    height: 3rem;        /* Lekko zwiększona wysokość dla lepszego wyglądu */
+    display: block;
+    width: 100%;
+    min-width: 12rem;              /* Ustaw stałą szerokość całego menu */
+    height: 3rem;
     line-height: 3rem;
     padding: 0 1.25rem;
+    text-align: center;            /* Wyśrodkowanie napisu */
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-size: 0.8rem;
     border-bottom: 0;
-    text-align: center;  /* Dodaj to, aby napisy były na środku */
-				}
+}
 
 					#header nav ul li a:hover {
 						background-color: rgba(255, 255, 255, 0.075);
@@ -1687,5 +1689,6 @@ CSS
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
 
 
