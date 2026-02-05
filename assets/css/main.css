@@ -1302,21 +1302,6 @@ input, select, textarea {
 				font-size: 2rem;
 			}
 
-	Aby uzyskać ten efekt, musimy zmodyfikować sekcję /* Header */ w Twoim pliku. Najlepiej będzie dodać kolor tła bezpośrednio do klasy .content wewnątrz nagłówka.
-
-Oto co musisz zrobić:
-1. Znajdź w swoim pliku ten fragment (okolice linii 910):
-CSS
-
-Cieszę się, że menu już działa! Skoro uporządkowaliśmy przyciski, zajmijmy się estetyką strony głównej.
-
-Oto jak rozwiązać Twoje trzy problemy w pliku main.css:
-1. Skrócenie kreski pod tekstem tytułowym
-
-W Twoim pliku za tę linię odpowiada element #header .content. Obecnie ma on border-bottom-width: 1px, który rozciąga się na 100% szerokości. Aby linia kończyła się zaraz za tekstem i nie nachodziła na menu, musimy zmienić sposób jej wyświetlania.
-
-Znajdź sekcję (okolice linii 910):
-CSS
 
 #header .content {
     border-style: solid;
@@ -1326,8 +1311,6 @@ CSS
     max-width: 100%;
 }
 
-Zmień ją na:
-CSS
 
 #header .content {
     border-style: solid;
@@ -1338,13 +1321,13 @@ CSS
     display: inline-block;
     width: auto;
     max-width: 100%;
+	background-color: rgba(0, 0, 0, 0.8) !important; /* Mocniejsze zacienienie */
 }
+/* Usunięcie pionowej kreski nad menu, która na nie nachodzi */
+#header nav:before {
+    display: none !important;
+	}
 
-
-2. Zamień go na ten kod:
-
-Dodałem tutaj linię background-color, która stworzy ciemniejszy pasek pod tekstem:
-CSS
 
 #header .content {
     border-style: solid;
@@ -1714,6 +1697,7 @@ CSS
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
 
 
 
