@@ -1351,7 +1351,7 @@ input, select, textarea {
     border-bottom-width: 1px;
     max-width: 100%;
     /* Dodana linia poniżej - czarny kolor, 80% przezroczystości */
-    background-color: rgba(0, 0, 0, 1.0); 
+    background-color: rgba(0, 0, 0, 0.8); 
 
 		}
 
@@ -1705,6 +1705,7 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
 
 
 
